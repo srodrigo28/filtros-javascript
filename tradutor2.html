@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor Wave</title>
+</head>
+<body>
+    <h1>Tradutor Wave</h1>
+    
+    <div class="idiomas">
+        <select class="doIdioma" id="entrada">
+            <option value="Português">Português</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Espanhol">Espanhol</option>
+        </select>
+        <select class="paraIdioma" id="saida2">
+            <option value="pt">Português</option>
+            <option value="en">Inglês</option>
+            <option value="esp">Espanhol</option>
+        </select>
+    </div>
+
+    <form>
+    <div>
+        <textarea id="textEntrada" placeholder="Digite seu texto"  class="original"></textarea>
+        <textarea id="textSaida" placeholder="Tradução" readonly class="traduzido"></textarea>
+    </div>
+
+    <button>Traduzir</button>
+    </form>
+  
+    <style>
+    
+    </style>
+
+    <script>
+        var selectEntrada = document.querySelector("#entrada")
+        var selectSaida   = document.querySelector("#saida2")
+
+        var textEntrada = document.querySelector("#textEntrada")
+        var textSaida = document.querySelector("#textSaida")
+
+        var btnTraduzir = document.querySelector("button")
+
+        /* 
+            1. teste de software
+            console.log(selectEntrada)
+            console.log(selectSaida)
+
+            console.log(textEntrada)
+            console.log(textSaida)
+            console.log(btnTraduzir)
+        */
+
+        // criando a função de click
+        btnTraduzir.onclick = function(event){
+            event.preventDefault()
+            // alert('Oi fui clicado')
+            // alert(selectEntrada.value)
+            // alert(textEntrada.value)
+
+            if( textEntrada.value.toLowerCase() == "yellow" ){
+                textSaida.value = ("Amarelo")
+                return
+            }
+
+            if( textEntrada.value.toLowerCase() == "red" ){
+                textSaida.value = ("Vermelho")
+                return
+            }
+
+            if( textEntrada.value.toLowerCase() == "black" ){
+                textSaida.value = ("Preto")
+                return
+            }
+            if( textEntrada.value.toLowerCase() == "blue" ){
+                textSaida.value = ("Azul")
+                return
+            }
+            if( textEntrada.value.toLowerCase() == "green" ){
+                textSaida.value = ("Verde")
+                return
+            }
+            if( textEntrada.value.toLowerCase() == "white" ){
+                textSaida.value = ("branco")
+                return
+            }
+            if( textEntrada.value.toLowerCase() == "orange" ){
+                textSaida.value = ("Laranja")
+                return
+            }
+            if( textEntrada.value.toLowerCase() == "brazil" ){
+                textSaida.value = ("Brasil")
+                return
+            }
+            if( textEntrada.value.toLowerCase() == "japan" ){
+                textSaida.value = ("Japão")
+                return
+            }
+            
+            else{
+               textSaida.value = ("Tradução não encontrada")
+            }
+         
+        }
+    </script>
+</body>
+</html>
